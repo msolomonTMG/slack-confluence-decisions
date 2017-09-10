@@ -1,0 +1,37 @@
+{
+  "name": "slack-confluence-decisions",
+  "version": "1.0.0",
+  "description": "Create Confluence decisions directly from Slack.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msolomonTMG/slack-confluence-decisions.git"
+  },
+  "keywords": [
+    "slack",
+    "slash command",
+    "confluence",
+    "decisions"
+  ],
+  "author": "Mike Solomon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msolomonTMG/slack-confluence-decisions/issues"
+  },
+  "homepage": "https://github.com/msolomonTMG/slack-confluence-decisions#readme",
+  "engines": {
+    "node": "6.6.0"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "botkit": "^0.5.8",
+    "botkit-storage-mongo": "^1.0.2",
+    "confluence-api": "^1.1.0",
+    "mongodb": "^2.2.19",
+    "slackbots": "^1.0.2"
+  }
+}
