@@ -51,10 +51,10 @@ if (!process.env.CLIENT_ID || !process.env.CLIENT_SECRET || !process.env.PORT ||
 }
 
 var config = {}
-if (process.env.MONGOLAB_URI) {
+if (process.env.MONGODB_URI) {
     var BotkitStorage = require('botkit-storage-mongo');
     config = {
-        storage: BotkitStorage({mongoUri: process.env.MONGOLAB_URI}),
+        storage: BotkitStorage({mongoUri: process.env.MONGODB_URI}),
         interactive_replies: true
     };
 } else {
