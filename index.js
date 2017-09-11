@@ -112,8 +112,15 @@ controller.on('slash_command', function (slashCommand, message) {
             // if no text was supplied, treat it as a help command
             if (message.text === "" || message.text === "help") {
                 slashCommand.replyPrivate(message,
-                    "I echo back what you tell me. " +
-                    "Try typing `/echo hello` to see.");
+                    "Use this slash command to create a Decision Page in Confluence directly from Slack!\n" +
+                    "Type `/decision <title of decision in the form of a question - end it with a question mark> " +
+                    "<optionally answer to the decision to set the outcome>`\n" +
+                    "The bot will then ask you to choose a Confluence space to store the decision page. " +
+                    "If the space already has a decision log, the decision will be nested underneath. " +
+                    "If not, the decision will be nested under the space's homepage. " +
+                    "The bot then provides a link to the decision page as well as a link to edit the page.\n" +
+                    "If you have any questions about how this works, or if you find a bug, "+
+                    "talk to us in #tech-progmanagers");
                 return;
             }
 
